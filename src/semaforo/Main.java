@@ -4,7 +4,8 @@ package semaforo;
 import java.util.Random;
 
 /**
- *
+ * Implementación del algoritmo Semáforo para la ejecución de procesos 
+ * concurrentes.
  * @author Carlos Perez
  */
 public class Main {

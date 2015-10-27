@@ -20,7 +20,7 @@ public class Proceso implements Runnable{
     /**
      * Constructor de la clase en donde se inicializa la duracion del proceso
      * y su identificador
-     * @param semaforo
+     * @param semaforo semaforo para controlar procesos
      * @param duracion duracion del proceso en unidad de segundos.
      * @param id identificador del proceso
      */

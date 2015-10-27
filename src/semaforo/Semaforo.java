@@ -32,8 +32,8 @@ public class Semaforo {
      */
     public synchronized void liberar() {
         recursosDisponibles++;//libera un recurso
-        notify();//avisa a todos los procesos que hay un recurso disponible
-                    //y todos tratan de acceder a el como loco.
+        notifyAll();//avisa a todos los procesos que hay un recurso disponible
+                 //y todos tratan de acceder a el como loco.
     }
 
     /**
@@ -45,15 +45,12 @@ public class Semaforo {
     public synchronized void acceder() {
         while (recursosDisponibles == 0) {
             try {
-//                System.out.println("No hay recursos, esperando...");
                 wait();
             } catch (Exception e) {
 
             }
         }
         recursosDisponibles--;
-//        System.out.println("Recurso tomado, que " + recursosDisponibles
-//                + " libres");
     }
 
 }
