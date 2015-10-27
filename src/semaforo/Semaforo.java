@@ -45,12 +45,12 @@ public class Semaforo {
     public synchronized void acceder() {
         while (recursosDisponibles == 0) {
             try {
-                wait();
+                wait();//bloquear proceso
             } catch (Exception e) {
 
             }
         }
-        recursosDisponibles--;
+        recursosDisponibles--;//tomar un recurso
     }
 
 }

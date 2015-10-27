@@ -19,7 +19,7 @@ public class Main {
         int duracion;
         
         for (int i = 1; i <= 10; i++) {
-            duracion = new Random().nextInt(10)+1;//numero rando entra 1 y 10
+            duracion = new Random().nextInt(10)+1;//numero random entra 1 y 10
             new Proceso(semaforo, duracion, i).ejecutar();
         }
     }
